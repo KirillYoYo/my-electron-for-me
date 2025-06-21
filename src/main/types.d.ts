@@ -2,8 +2,12 @@
 declare const MAIN_WINDOW_VITE_DEV_SERVER_URL: string;
 declare const MAIN_WINDOW_VITE_NAME: string;
 
-
 declare interface Window {
-    electron: unknown;
-    versions: unknown;
+	electron: unknown;
+	versions: unknown;
+	api: {
+		sendPing: (args?) => void;
+		onPong: (args?) => unknown;
+		removePong: (args?) => unknown;
+	};
 }
